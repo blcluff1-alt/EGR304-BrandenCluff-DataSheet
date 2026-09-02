@@ -1,15 +1,15 @@
 ---
-title:Branden Cluff
-tags:
-- tag1
-- tag2
+title:Branden Cluff  
+tags:  
+- tag1  
+- tag2  
 ---
 <center>
-<font size= "6">(Your Name) Datasheet</font><br>
+<font size= "6">Branden Cluff Datasheet</font><br>
 as part of<br>
-<font size= "8"> Project Name</font><br>
+<font size= "8">EGR 304 Course Project</font><br>
 for<br>
-<font size= "5"> Team ### </font><br>
+<font size= "5"> Team 202 </font><br>
 
 **Submission: month, DD, YYYY**
 </center>
