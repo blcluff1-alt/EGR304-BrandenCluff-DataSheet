@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#subsystem-electrical-overview" class="md-skip">
           Skip to content
         </a>
       
@@ -502,18 +502,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#subsystem-electrical-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      Subsystem Electrical Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Subsystem Electrical Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose-of-the-block-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose of the Block Diagram
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#system-specifications-key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Specifications &amp; Key Features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#example-block-diagram" class="md-nav__link">
+  <a href="#block-diagram" class="md-nav__link">
     <span class="md-ellipsis">
-      Example Block Diagram
+      Block Diagram
     </span>
   </a>
   
@@ -802,18 +826,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#subsystem-electrical-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      Subsystem Electrical Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Subsystem Electrical Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose-of-the-block-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose of the Block Diagram
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#system-specifications-key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Specifications &amp; Key Features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#example-block-diagram" class="md-nav__link">
+  <a href="#block-diagram" class="md-nav__link">
     <span class="md-ellipsis">
-      Example Block Diagram
+      Block Diagram
     </span>
   </a>
   
@@ -844,19 +892,37 @@
 
   <h1>Individal Block Diagram</h1>
 
-<h2 id="overview">Overview</h2>
-<p>This needs to be updated with a brief purpose for having the block diagram.
-Things to mention are:
-* power levels
-* sensor
-* Actuator
-* team connections
-* Power source
-* ...</p>
-<p>To get some initial formatting help, one can view <a href="https://embedded-systems-design.github.io/EGR304DataSheetTemplate/Appendix/basic-markdown-examples/">"here"</a> some basic techniques.</p>
-<h2 id="example-block-diagram">Example Block Diagram</h2>
-<p>Showing an example of how to import a screenshot of the block diagram created outside of git and brought into a page.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../IndividualBlockDiagram.drawio.png" data-desc-position="bottom"><img alt="Indivial Block diagram " src="../IndividualBlockDiagram.drawio.png"></a></p>
+<h3 id="subsystem-electrical-overview">Subsystem Electrical Overview</h3>
+<h4 id="purpose-of-the-block-diagram">Purpose of the Block Diagram</h4>
+<p>The purpose of this individual subsystem block diagram is to define the hardware layout, signal conditioning stages, and electrical interfaces for the light-sensing subsystem prior to schematic capture and PCB layout. It serves as a visual guide for component selection, pin mapping on the PIC18F57Q43 Curiosity Nano microcontroller, voltage management, and inter-board connectivity with teammates' hardware.</p>
+<hr>
+<h4 id="system-specifications-key-features">System Specifications &amp; Key Features</h4>
+<ul>
+<li>
+<p><strong>Power Source &amp; Supply Voltage:</strong><br>
+  The subsystem is powered by a regulated <strong>+5V DC</strong> power domain capable of delivering up to <strong>1.5A</strong> via an LM7805 linear voltage regulator. This rail powers the microcontroller, analog signal conditioning components, and sensor interface.</p>
+</li>
+<li>
+<p><strong>Power Levels:</strong><br>
+  All signal levels operating within this block maintain a nominal voltage range of <strong>0 to 5V DC</strong> across both analog input paths and digital serial communication lines.</p>
+</li>
+<li>
+<p><strong>Sensor &amp; Signal Conditioning:</strong>  </p>
+</li>
+<li><strong>Sensor:</strong> A 5540 photoresistor configured in a voltage divider continuously measures ambient light levels.  </li>
+<li>
+<p><strong>Signal Conditioning:</strong> The variable analog output from the photoresistor passes through a Microchip MCP6004 operational amplifier configured as a non-inverting buffer. This stage provides high input impedance to prevent loading on the sensor divider and low output impedance to cleanly drive the microcontroller's <code>RA0</code> ADC pin.</p>
+</li>
+<li>
+<p><strong>Team Connections &amp; Communication Interfaces:</strong><br>
+  Inter-board connectivity and system-wide integration are handled through standard ribbon cable connector <strong>Connector 1</strong>:</p>
+</li>
+<li><strong>Digital Serial (UART):</strong> Transmit (<code>TX</code> on pin <code>RC2</code>) and Receive (<code>RX</code> on pin <code>RC3</code>) signals interface with teammates' boards via dedicated 5V UART lines at pins 2 and 3 of Connector 1.</li>
+<li><strong>Shared Ground &amp; Power:</strong> Pin 8 of Connector 1 establishes a common ground (<code>GND</code>) across all team boards to maintain a consistent signal reference.
+To get some initial formatting help, one can view <a href="https://embedded-systems-design.github.io/EGR304DataSheetTemplate/Appendix/basic-markdown-examples/">"here"</a> some basic techniques.</li>
+</ul>
+<h2 id="block-diagram">Block Diagram</h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../IndividualBlockDiagram.drawio.png" data-desc-position="bottom"><img alt="" src="../IndividualBlockDiagram.drawio.png"></a></p>
 
 
 
