@@ -32,4 +32,4 @@ To get some initial formatting help, one can view ["here"](https://embedded-syst
 
 
 ## Block Diagram 
-![](IndividualBlockDiagram.drawio.png)
+![](IndividualBlockDiagram.drawio(1).png)
