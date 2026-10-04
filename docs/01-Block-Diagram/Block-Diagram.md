@@ -28,8 +28,6 @@ The purpose of this individual subsystem block diagram is to define the hardware
   Inter-board connectivity and system-wide integration are handled through standard ribbon cable connector **Connector 1**:
   * **Digital Serial (UART):** Transmit (`TX` on pin `RC2`) and Receive (`RX` on pin `RC3`) signals interface with teammates' boards via dedicated 5V UART lines at pins 2 and 3 of Connector 1.
   * **Shared Ground & Power:** Pin 8 of Connector 1 establishes a common ground (`GND`) across all team boards to maintain a consistent signal reference.
-To get some initial formatting help, one can view ["here"](https://embedded-systems-design.github.io/EGR304DataSheetTemplate/Appendix/basic-markdown-examples/) some basic techniques.
-
 
 ## Block Diagram 
 ![](IndividualBlockDiagram.drawio(1).png)
