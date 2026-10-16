@@ -23,6 +23,7 @@ This document identifies, compares, and contrasts multiple off-the-shelf and cus
   * Performance varies noticeably across operating temperature ranges
 
 **Option 2:** [Adafruit Industries LLC Photoresistor (161)](https://www.digikey.com/en/products/detail/adafruit-industries-llc/161/7244927?gclsrc=aw.ds&gad_source=4&gad_campaignid=20232005509&gclid=CjwKCAjw88HWBhA3EiwAo2Zd6A3haKnLQ2WzPscs47utOvQ20RPyVMHKu1Gbs-S90HJDtFfdsrHo3hoCyNYQAvD_BwE)
+
 ![](MFG_1528_161_sml.jpg)
 - **Unit Cost:** $0.95
 - **Pros:**
