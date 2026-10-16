@@ -23,6 +23,7 @@ This document identifies, compares, and contrasts multiple off-the-shelf and cus
   * Performance varies noticeably across operating temperature ranges
 
 **Option 2:** [Adafruit Industries LLC Photoresistor (161)](https://www.digikey.com/en/products/detail/adafruit-industries-llc/161/7244927?gclsrc=aw.ds&gad_source=4&gad_campaignid=20232005509&gclid=CjwKCAjw88HWBhA3EiwAo2Zd6A3haKnLQ2WzPscs47utOvQ20RPyVMHKu1Gbs-S90HJDtFfdsrHo3hoCyNYQAvD_BwE)
+
 ![](MFG_1528_161_sml.jpg)
 * **Unit Cost:** $0.95
 * **Pros:**
@@ -54,7 +55,7 @@ This document identifies, compares, and contrasts multiple off-the-shelf and cus
 * **Description:** Active multi-channel integrated circuit used to buffer, scale, and condition the analog voltage signal from the photoresistor divider before routing it to the microcontroller ADC[cite: 1].
 
 **Option 1:** [Microchip Technology MCP6004-I/P Quad Op-Amp](https://www.digikey.com/en/products/detail/microchip-technology/MCP6004-I-P/523060?gclsrc=aw.ds&gad_source=1&gad_campaignid=20790518593&gclid=CjwKCAjw88HWBhA3EiwAo2Zd6FaBLTIoZlL08YNlASY-dnVOxjivM6t0XIXYmlYQm0FLJhkiRFNeFxoCJRIQAvD_BwE)  
-![]()
+![](MCP6004.jpg)
 * **Unit Cost:** $0.60
 * **Pros:**
   * Quad packaging provides four independent amplifiers in a single 14-pin DIP package, matching multi-channel project needs
@@ -65,7 +66,7 @@ This document identifies, compares, and contrasts multiple off-the-shelf and cus
   * Higher input offset voltage (4.5 mV max) compared to precision zero-drift amplifiers
 
 **Option 2:** [Texas Instruments LM324AN/NOPB Quad Operational Amplifier](https://www.digikey.com/en/products/detail/texas-instruments/LM324AN-NOPB/4733935?gclsrc=aw.ds&gad_source=4&gad_campaignid=20228387720&gclid=CjwKCAjw88HWBhA3EiwAo2Zd6OxryJVN4nKf-lCkC1aVKXZiIfELwSPW_sR4lHUh46O6irp-H2pELhoCIbIQAvD_BwE)  
-![]()
+![](LM324AN.jpg)
 * **Unit Cost:** $1.18
 * **Pros:**
   * Industry classic, highly robust, and widely second-sourced across manufacturers
@@ -76,7 +77,7 @@ This document identifies, compares, and contrasts multiple off-the-shelf and cus
   * Higher input bias currents can introduce loading errors on high-impedance resistive sensors
 
 **Option 3:** [Texas Instruments LM2904N/NOPB Dual Operational Amplifier](https://www.digikey.com/en/products/detail/texas-instruments/LM2904N-NOPB/9503?gclsrc=aw.ds&gad_source=4&gad_campaignid=20228387720&gclid=CjwKCAjw88HWBhA3EiwAo2Zd6PNaR_L9dUJDYL6c3gw-JPnZcgQEP2BATJxfeRAvDtghp4Jzk9s9jBoCKjwQAvD_BwE)  
-![]()
+![](LM2904N.jpg)
 * **Unit Cost:** $1.53
 * **Pros:**
   * Proven automotive/industrial grade dual op-amp with robust temperature stability
@@ -96,7 +97,7 @@ This document identifies, compares, and contrasts multiple off-the-shelf and cus
 * **Description:** Linear voltage regulator used to step down an external DC input voltage to a stable +5V rail for system logic and active sensors[cite: 1].
 
 **Option 1:** [STMicroelectronics L7805CV Linear Regulator](https://www.digikey.com/en/products/detail/stmicroelectronics/L7805CV/585964?gclsrc=aw.ds&gad_source=4&gad_campaignid=24216345527&gclid=CjwKCAjw88HWBhA3EiwAo2Zd6CxCh2O9be1WQWI78UesoRwUkcHCLdEhWNnG7OsbKwciV7ROlTCfPBoCBhcQAvD_BwE)  
-![]()
+![](L7805CV.jpg)
 * **Unit Cost:** $1.08
 * **Pros:**
   * Built-in internal thermal overload and short-circuit current limiting protections
@@ -107,7 +108,7 @@ This document identifies, compares, and contrasts multiple off-the-shelf and cus
   * Higher dropout voltage requires at least 7V–7.5V input to guarantee solid 5V regulation
 
 **Option 2:** [Fairchild Semiconductor LM7805CT Linear Regulator](https://www.digikey.com/en/products/detail/fairchild-semiconductor/LM7805CT/12600247?gclsrc=aw.ds&gad_source=4&gad_campaignid=20228387720&gclid=CjwKCAjw88HWBhA3EiwAo2Zd6McY28ejmCJkb6UukR0h0GEDCj0qNVoPqMKogwqu5gk92IukwZcxpRoCyNIQAvD_BwE) 
-![]()
+![](MFG_L7805CV_sml(200x200).jpg)
 * **Unit Cost:** $1.74
 * **Pros:**
   * Classic 1.5A positive voltage regulator design with robust transient response
@@ -118,7 +119,7 @@ This document identifies, compares, and contrasts multiple off-the-shelf and cus
   * Standard linear thermal dissipation constraints apply under heavy load differences
 
 **Option 3:** [UMW L7805CV Linear Regulator](https://www.digikey.com/en/products/detail/umw/L7805CV/17635308?gclsrc=aw.ds&gad_source=4&gad_campaignid=21136823955&gclid=CjwKCAjw88HWBhA3EiwAo2Zd6DBtzZL1cR3kaDQNRy3iu1tnKz8BVTbi_Mep4_b3YuI4tf5wW3_iKRoCOXQQAvD_BwE) 
-![]()
+![](L7805CV.jpg)
 * **Unit Cost:** $1.74
 * **Pros:**
   * Highly economical pricing for budget-conscious project builds
