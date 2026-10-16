@@ -431,7 +431,442 @@
 
 
 <h1 id="power-budget">Power Budget</h1>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../budgetPg1.png" data-desc-position="bottom"><img alt="Power Budget" src="../budgetPg1.png"></a></p>
+<table>
+<thead>
+<tr>
+<th>Branden Cluff's Power Budget</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Team Number:</td>
+<td>202</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Project Name:</td>
+<td>Weather System</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Team Member Names:</td>
+<td>Zander Boward, Sidra Elsaady, Brendan Laskowski</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Version:</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>A. List ALL major components (active devices, integrated circuits, etc.) except for power sources, voltage regulators, resistors, capacitors, or passive elements</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>All Major Components</td>
+<td>Component Name</td>
+<td>Part Number</td>
+<td>Supply<br>Voltage<br>Range</td>
+<td>#</td>
+<td>Absolute<br>Maximum<br>Current (mA)</td>
+<td>Total<br>Current<br>(mA)</td>
+<td>Unit</td>
+</tr>
+<tr>
+<td></td>
+<td>PIC18F57Q43 Curiosity Nano</td>
+<td>PIC18F57Q43</td>
+<td>+3.3V - 5.0V</td>
+<td>1</td>
+<td>20</td>
+<td>20</td>
+<td>mA</td>
+</tr>
+<tr>
+<td></td>
+<td>MCP6004 Quad Op-Amp</td>
+<td>MCP6004</td>
+<td>+1.8V - 5.5V</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>mA</td>
+</tr>
+<tr>
+<td></td>
+<td>PDV-P8103 Photoresistor</td>
+<td>PDV-P8103</td>
+<td>Variable/Passive</td>
+<td>1</td>
+<td>0.5</td>
+<td>0.5</td>
+<td>mA</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>B. Assign each major component above to ONE power rail below. Try to minimize the number of different power rails in the design. <br>Add additional power rails or change the power rail voltages if needed.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>+5V Power Rail</td>
+<td>Component Name</td>
+<td>Part Number</td>
+<td>Supply<br>Voltage<br>Range</td>
+<td>#</td>
+<td>Absolute<br>Maximum<br>Current (mA)</td>
+<td>Total<br>Current<br>(mA)</td>
+<td>Unit</td>
+</tr>
+<tr>
+<td></td>
+<td>PIC18F57Q43 Curiosity Nano</td>
+<td>PIC18F57Q43</td>
+<td>+3.3V - 5.0V</td>
+<td>1</td>
+<td>20</td>
+<td>20</td>
+<td>mA</td>
+</tr>
+<tr>
+<td></td>
+<td>MCP6004 Quad Op-Amp</td>
+<td>MCP6004</td>
+<td>+1.8V - 5.5V</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>mA</td>
+</tr>
+<tr>
+<td></td>
+<td>PDV-P8103 Photoresistor</td>
+<td>PDV-P8103</td>
+<td>Variable/Passive</td>
+<td>1</td>
+<td>0.5</td>
+<td>0.5</td>
+<td>mA</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>mA</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>mA</td>
+</tr>
+<tr>
+<td></td>
+<td>Subtotal</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>22.5</td>
+<td>mA</td>
+</tr>
+<tr>
+<td></td>
+<td>Safety Margin</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>25%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Total Current Required on +5V Rail</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>28.125</td>
+<td>mA</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>c1. Regulator or Source Choice</td>
+<td>STMicroelectronics L7805CV Linear Regulator</td>
+<td>L7805CV</td>
+<td>+7V-35V</td>
+<td>1</td>
+<td>1000</td>
+<td>1000</td>
+<td>mA</td>
+</tr>
+<tr>
+<td></td>
+<td>Total Remaining Current Available on +12V Rail</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>971.875</td>
+<td>mA</td>
+</tr>
+<tr>
+<td>C. For each power rail above, select a specific voltage regulator using the same process as for major component selection. Confirm that the Total Remaining Current Available on each rail above is not negative.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>D. Select a specific external power source (wall supply or battery) for your system, and confirm that it can supply all of the regulators for all of the power rails simultaneously. If you need multiple power sources, list each separately below and indicate which regulators will be connected to each supply. Confirm that the Total Remaining Current Available on each power source below is not negative.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>External Power Source 1</td>
+<td>Component Name</td>
+<td>Part Number</td>
+<td>Supply<br>Voltage<br>Range</td>
+<td>Output Voltage</td>
+<td>Absolute<br>Maximum<br>Current (mA)</td>
+<td>Total<br>Current<br>(mA)</td>
+<td>Unit</td>
+</tr>
+<tr>
+<td>Power Source 1 Selection</td>
+<td>9V DC Wall Adapter</td>
+<td>WSU090-1300-13</td>
+<td>+90 - 264 VAC</td>
+<td>+9V</td>
+<td>1300</td>
+<td>1300</td>
+<td>mA</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Power Rails Connected to External Power Source 1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>mA</td>
+</tr>
+<tr>
+<td></td>
+<td>+5V Regulator STMicroelectronics L7805CV Linear Regulator</td>
+<td>LM7805CV</td>
+<td>(range)</td>
+<td>1</td>
+<td>1000</td>
+<td>1000</td>
+<td>mA</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>mA</td>
+</tr>
+<tr>
+<td></td>
+<td>Total Remaining Current Available on External Power Source 1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>300</td>
+<td>mA</td>
+</tr>
+<tr>
+<td>E. Calculate Battery Life (if applicable).  For each battery, also check the worst-case lifetime of the battery by indicating the capacity in mAh.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Component Name</td>
+<td>Part Number</td>
+<td>Supply<br>Voltage<br>Range</td>
+<td></td>
+<td>Capacity<br>(mAh)</td>
+<td>Required<br>By<br>Regulators</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Standard 9V Alkaline Battery</td>
+<td>6LR61-1B</td>
+<td>+9V</td>
+<td></td>
+<td>480</td>
+<td>22.5</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Battery Life</td>
+<td>21.33333333</td>
+<td>hours</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../budgetPg1.png" data-desc-position="bottom"><img alt="Power Budget" src="../budgetPg1.png"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 
 
