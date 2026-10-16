@@ -1,58 +1,137 @@
+# Component Selection: Light Sensing Subsystem
+
+This document identifies, compares, and contrasts multiple off-the-shelf and custom solutions for every major active component in the Light Sensing Subsystem[cite: 1].
+
 ---
-title: Component Selection Example
+
+## Major Component Selections
+
+### Light Sensor / Photoresistor
+* **Subsystem:** Light Sensing Subsystem
+* **Description:** A variable resistor whose resistance decreases with increasing incident light intensity, used to detect ambient light levels[cite: 1].
+
+**Option 1:** [Advanced Photonix PDV-P8103 Photoresistor](https://www.digikey.com/en/products/detail/advanced-photonix/PDV-P8103/480610?gclsrc=aw.ds&gad_source=1&gad_campaignid=20232005509&gclid=CjwKCAjw88HWBhA3EiwAo2Zd6ItJudJQgGAMYT0UdEfhO8QxFR5CcLx-1gv10VwK_xdwT0Irrl9zuBoCCXIQAvD_BwE)  
+* **Unit Cost:** $0.72
+* **Pros:**
+  * Industry-standard component with well-documented spectral response matching human eye adaptation (~520 nm peak)
+  * Reliable 16–33 kΩ resistance range at 10 lux for clear voltage divider scaling
+  * Simple passive two-terminal through-hole interface requiring minimal board space
+* **Cons:**
+  * Contains cadmium sulfide (CdS), which is subject to environmental regulatory restrictions in certain regions
+  * Slower response time compared to semiconductor photodiodes
+  * Performance varies noticeably across operating temperature ranges
+
+**Option 2:** [Adafruit Industries LLC Photoresistor (161)](https://www.digikey.com/en/products/detail/adafruit-industries-llc/161/7244927?gclsrc=aw.ds&gad_source=4&gad_campaignid=20232005509&gclid=CjwKCAjw88HWBhA3EiwAo2Zd6A3haKnLQ2WzPscs47utOvQ20RPyVMHKu1Gbs-S90HJDtFfdsrHo3hoCyNYQAvD_BwE)  
+* **Unit Cost:** $0.95
+* **Pros:**
+  * Easily accessible hobbyist and prototyping component with broad community documentation
+  * Standard through-hole leads fit standard breadboards and perfboards seamlessly
+  * Cost-effective solution for basic light-level detection
+* **Cons:**
+  * Lacks detailed, rigorous industrial datasheet parametric curves for precise engineering calculations
+  * Part-to-part manufacturing tolerances can be wider than industrial-grade components
+
+**Option 3:** [Advanced Photonix NSL-19M51 Photoresistor](https://www.digikey.com/en/products/detail/advanced-photonix/NSL-19M51/5039794?gclsrc=aw.ds&gad_source=4&gad_campaignid=20232005509&gclid=CjwKCAjw88HWBhA3EiwAo2Zd6GKBTk-YHDayWF8TEzknnWdCNLg3ZWkpF4lIr4LGKpLHJ30Gbes0qRoCjgsQAvD_BwE)  
+* **Unit Cost:** $1.05
+* **Pros:**
+  * Tight resistance tolerance band for more predictable circuit response
+  * Optimized peak spectral response closely mimicking human eye perception
+  * High-reliability hermetic or robust package construction suitable for semi-industrial environments
+* **Cons:**
+  * Higher unit cost compared to standard commercial CdS cells
+  * Slower dark-to-light transition times under low illumination levels
+
+**Choice:** Option 1: Advanced Photonix PDV-P8103 Photoresistor  
+**Rationale:** The PDV-P8103 provides a robust, highly predictable resistance swing under varying room lighting conditions that pairs exceptionally well with our voltage divider network. Its through-hole package makes it easy to mount mechanically near enclosure apertures, and its detailed datasheet performance curves allow precise calculation of the op-amp input ranges.
+
 ---
 
-## Examples
+### Signal Conditioning / Operational Amplifier
+* **Subsystem:** Light Sensing Subsystem[cite: 1]
+* **Description:** Active multi-channel integrated circuit used to buffer, scale, and condition the analog voltage signal from the photoresistor divider before routing it to the microcontroller ADC[cite: 1].
 
-### Style 1
+**Option 1:** [Microchip Technology MCP6004-I/P Quad Op-Amp](https://www.digikey.com/en/products/detail/microchip-technology/MCP6004-I-P/523060?gclsrc=aw.ds&gad_source=1&gad_campaignid=20790518593&gclid=CjwKCAjw88HWBhA3EiwAo2Zd6FaBLTIoZlL08YNlASY-dnVOxjivM6t0XIXYmlYQm0FLJhkiRFNeFxoCJRIQAvD_BwE)  
+* **Unit Cost:** $0.60
+* **Pros:**
+  * Quad packaging provides four independent amplifiers in a single 14-pin DIP package, matching multi-channel project needs
+  * Rail-to-rail input and output voltage capability maximizes ADC dynamic range
+  * Extremely low quiescent supply current (~100 µA per channel) ideal for efficient power budgets
+* **Cons:**
+  * Modest 1 MHz Gain Bandwidth Product limits high-frequency filtering applications
+  * Higher input offset voltage (4.5 mV max) compared to precision zero-drift amplifiers
 
-> This is the example found in the assignment, uses more html
+**Option 2:** [Texas Instruments LM324AN/NOPB Quad Operational Amplifier](https://www.digikey.com/en/products/detail/texas-instruments/LM324AN-NOPB/4733935?gclsrc=aw.ds&gad_source=4&gad_campaignid=20228387720&gclid=CjwKCAjw88HWBhA3EiwAo2Zd6OxryJVN4nKf-lCkC1aVKXZiIfELwSPW_sR4lHUh46O6irp-H2pELhoCIbIQAvD_BwE)  
+* **Unit Cost:** $1.18
+* **Pros:**
+  * Industry classic, highly robust, and widely second-sourced across manufacturers
+  * Operates on a wide single-supply voltage range with low unit cost
+  * Readily available through-hole PDIP package for straightforward prototyping
+* **Cons:**
+  * Outputs do not comfortably reach ground ($V_{ss}$) without a pull-down resistor on single-supply setups
+  * Higher input bias currents can introduce loading errors on high-impedance resistive sensors
 
-*Table 1: Example component selection*
+**Option 3:** [Texas Instruments LM2904N/NOPB Dual Operational Amplifier](https://www.digikey.com/en/products/detail/texas-instruments/LM2904N-NOPB/9503?gclsrc=aw.ds&gad_source=4&gad_campaignid=20228387720&gclid=CjwKCAjw88HWBhA3EiwAo2Zd6PNaR_L9dUJDYL6c3gw-JPnZcgQEP2BATJxfeRAvDtghp4Jzk9s9jBoCKjwQAvD_BwE)  
+* **Unit Cost:** $1.53
+* **Pros:**
+  * Proven automotive/industrial grade dual op-amp with robust temperature stability
+  * Low input bias current and low quiescent power consumption
+  * Standard 8-pin DIP package is compact and easy to solder
+* **Cons:**
+  * Only contains two operational amplifiers per package, requiring multiple ICs if extra channels are needed
+  * Slower slew rate compared to modern CMOS operational amplifiers
 
-**External Clock Module**
+**Choice:** Option 1: Microchip Technology MCP6004-I/P Quad Op-Amp[cite: 1]  
+**Rationale:** The MCP6004 offers rail-to-rail input/output behavior, ensuring that our scaled 0–5V analog signal maps cleanly across the microcontroller's ADC input range without clipping at the rails. Furthermore, its quad configuration allows us to implement our non-inverting buffer stage efficiently while keeping total active component count and quiescent power draw low.
 
-| **Solution**                                                                                                                                                                                      | **Pros**                                                                                                                                    | **Cons**                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| ![](image1.png)<br>Option 1.<br> XC1259TR-ND surface mount crystal<br>$1/each<br>[link to product](http://www.digikey.com/product-detail/en/ECS-40.3-S-5PX-TR/XC1259TR-ND/827366)                 | \* Inexpensive[^1]<br>\* Compatible with PSoC<br>\* Meets surface mount constraint of project                                               | \* Requires external components and support circuitry for interface<br>\* Needs special PCB layout. |
-| ![](image3.png)<br>\* Option 2. <br>\* CTX936TR-ND surface mount oscillator <br>\* $1/each <br>\* [Link to product](http://www.digikey.com/product-detail/en/636L3I001M84320/CTX936TR-ND/2292940) | \* Outputs a square wave <br>\* Stable over operating temperature <br> \* Direct interface with PSoC (no external circuitry required) range | * More expensive <br>\* Slow shipping speed                                                         |
+---
 
-**Choice:** Option 2: CTX936TR-ND surface mount oscillator
+### Voltage Regulator
+* **Subsystem:** Power Distribution / Light Sensing Subsystem[cite: 1]
+* **Description:** Linear voltage regulator used to step down an external DC input voltage to a stable +5V rail for system logic and active sensors[cite: 1].
 
-**Rationale:** A clock oscillator is easier to work with because it requires no external circuitry in order to interface with the PSoC. This is particularly important because we are not sure of the electrical characteristics of the PCB, which could affect the oscillation of a crystal. While the shipping speed is slow, according to the website if we order this week it will arrive within 3 weeks.
+**Option 1:** [STMicroelectronics L7805CV Linear Regulator](https://www.digikey.com/en/products/detail/stmicroelectronics/L7805CV/585964?gclsrc=aw.ds&gad_source=4&gad_campaignid=24216345527&gclid=CjwKCAjw88HWBhA3EiwAo2Zd6CxCh2O9be1WQWI78UesoRwUkcHCLdEhWNnG7OsbKwciV7ROlTCfPBoCBhcQAvD_BwE)  
+* **Unit Cost:** $1.08
+* **Pros:**
+  * Built-in internal thermal overload and short-circuit current limiting protections
+  * Industry-standard TO-220 package allows easy attachment to a heatsink if dissipation increases
+  * Requires very few external support components (simple input/output bypass capacitors)
+* **Cons:**
+  * Low power efficiency when dropping high input voltages down to 5V (linear voltage drop is lost as heat)
+  * Higher dropout voltage requires at least 7V–7.5V input to guarantee solid 5V regulation
 
-### Style 2
+**Option 2:** [Fairchild Semiconductor LM7805CT Linear Regulator](https://www.digikey.com/en/products/detail/fairchild-semiconductor/LM7805CT/12600247?gclsrc=aw.ds&gad_source=4&gad_campaignid=20228387720&gclid=CjwKCAjw88HWBhA3EiwAo2Zd6McY28ejmCJkb6UukR0h0GEDCj0qNVoPqMKogwqu5gk92IukwZcxpRoCyNIQAvD_BwE)  
+* **Unit Cost:** $1.74
+* **Pros:**
+  * Classic 1.5A positive voltage regulator design with robust transient response
+  * Standard pinout compatible with universal TO-220 layouts
+  * Well-established thermal and electrical safety characteristics
+* **Cons:**
+  * Stock availability can fluctuate depending on manufacturer lot allocations
+  * Standard linear thermal dissipation constraints apply under heavy load differences
 
-> Also acceptable, more markdown friendly
+**Option 3:** [UMW L7805CV Linear Regulator](https://www.digikey.com/en/products/detail/umw/L7805CV/17635308?gclsrc=aw.ds&gad_source=4&gad_campaignid=21136823955&gclid=CjwKCAjw88HWBhA3EiwAo2Zd6DBtzZL1cR3kaDQNRy3iu1tnKz8BVTbi_Mep4_b3YuI4tf5wW3_iKRoCOXQQAvD_BwE)  
+* **Unit Cost:** $1.74
+* **Pros:**
+  * Highly economical pricing for budget-conscious project builds
+  * Standard TO-220 packaging for easy mounting and prototyping
+  * Provides stable fixed 5V output for standard logic and sensor rails
+* **Cons:**
+  * Alternative second-source brand with less historical pedigree than tier-1 manufacturers like STMicroelectronics
+  * Maximum output current is rated slightly lower or subject to variance compared to classic 1.5A variants
 
-**External Clock Module**
+**Choice:** Option 1: STMicroelectronics L7805CV Linear Regulator[cite: 1]  
+**Rationale:** The L7805CV is a reliable, industry-proven linear regulator from a premier manufacturer that provides clean, low-ripple DC power suitable for sensitive analog circuitry like our photoresistor and op-amp signal conditioning stage. Its robust thermal protection and standard TO-220 packaging make it ideal for dependable benchtop and enclosure deployment.
 
-1. XC1259TR-ND surface mount crystal
+---
 
-    ![](image1.png)
+## Pin Table
 
-    * $1/each
-    * [link to product](http://www.digikey.com/product-detail/en/ECS-40.3-S-5PX-TR/XC1259TR-ND/827366)
-
-    | Pros                                      | Cons                                                             |
-    | ----------------------------------------- | ---------------------------------------------------------------- |
-    | Inexpensive                               | Requires external components and support circuitry for interface |
-    | Compatible with PSoC                      | Needs special PCB layout.                                        |
-    | Meets surface mount constraint of project |
-
-1. CTX936TR-ND surface mount oscillator
-
-    ![](image3.png)
-
-    * $1/each
-    * [Link to product](http://www.digikey.com/product-detail/en/636L3I001M84320/CTX936TR-ND/2292940)
-
-    | Pros                                                              | Cons                |
-    | ----------------------------------------------------------------- | ------------------- |
-    | Outputs a square wave                                             | More expensive      |
-    | Stable over operating temperature                                 | Slow shipping speed |
-    | Direct interface with PSoC (no external circuitry required) range |
-
-**Choice:** Option 2: CTX936TR-ND surface mount oscillator
-
-**Rationale:** A clock oscillator is easier to work with because it requires no external circuitry in order to interface with the PSoC. This is particularly important because we are not sure of the electrical characteristics of the PCB, which could affect the oscillation of a crystal. While the shipping speed is slow, according to the website if we order this week it will arrive within 3 weeks.
+| Pin Number / Designator | Subsystem / Component | Signal Name / Type | Description |
+| :--- | :--- | :--- | :--- |
+| **RA0 / AN0** | Microcontroller (PIC18F57Q43)[cite: 1] | Analog Input[cite: 1] | Receives conditioned 0–5V analog signal from the non-inverting op-amp stage[cite: 1] |
+| **RC2** | Microcontroller (PIC18F57Q43)[cite: 1] | Digital Output (UART1 TX)[cite: 1] | Transmits serial telemetry data through Connector 1[cite: 1] |
+| **RC3** | Microcontroller (PIC18F57Q43)[cite: 1] | Digital Input (UART1 RX)[cite: 1] | Receives external serial commands through Connector 1[cite: 1] |
+| **Connector Pin 1** | External Interface[cite: 1] | Digital / Serial[cite: 1] | UART RX connection line[cite: 1] |
+| **Connector Pin 2** | External Interface[cite: 1] | Digital / Serial[cite: 1] | UART TX connection line[cite: 1] |
+| **Connector Pin 6** | External Interface[cite: 1] | Analog[cite: 1] | Raw analog signal test point / breakout[cite: 1] |
+| **Connector Pin 8** | External Interface[cite: 1] | Ground (GND)[cite: 1] | System common ground return[cite: 1] |
