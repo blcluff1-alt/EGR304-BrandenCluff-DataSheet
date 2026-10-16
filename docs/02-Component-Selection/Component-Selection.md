@@ -129,9 +129,9 @@ This document identifies, compares, and contrasts multiple off-the-shelf and cus
 | Pin Number / Designator | Subsystem / Component | Signal Name / Type | Description |
 | :--- | :--- | :--- | :--- |
 | **RA0 / AN0** | Microcontroller (PIC18F57Q43)[cite: 1] | Analog Input[cite: 1] | Receives conditioned 0–5V analog signal from the non-inverting op-amp stage[cite: 1] |
-| **RC2** | Microcontroller (PIC18F57Q43)[cite: 1] | Digital Output (UART1 TX)[cite: 1] | Transmits serial telemetry data through Connector 1[cite: 1] |
-| **RC3** | Microcontroller (PIC18F57Q43)[cite: 1] | Digital Input (UART1 RX)[cite: 1] | Receives external serial commands through Connector 1[cite: 1] |
-| **Connector Pin 1** | External Interface[cite: 1] | Digital / Serial[cite: 1] | UART RX connection line[cite: 1] |
-| **Connector Pin 2** | External Interface[cite: 1] | Digital / Serial[cite: 1] | UART TX connection line[cite: 1] |
-| **Connector Pin 6** | External Interface[cite: 1] | Analog[cite: 1] | Raw analog signal test point / breakout[cite: 1] |
-| **Connector Pin 8** | External Interface[cite: 1] | Ground (GND)[cite: 1] | System common ground return[cite: 1] |
+| **RC2** | Microcontroller (PIC18F57Q43) | Digital Output (UART1 TX) | Transmits serial telemetry data through Connector 1 |
+| **RC3** | Microcontroller (PIC18F57Q43) | Digital Input (UART1 RX) | Receives external serial commands through Connector 1 |
+| **Connector Pin 1** | External Interface | Digital / Serial | UART RX connection line |
+| **Connector Pin 2** | External Interface | Digital / Serial | UART TX connection line |
+| **Connector Pin 6** | External Interface | Analog | Raw analog signal test point / breakout |
+| **Connector Pin 8** | External Interface | Ground (GND) | System common ground return |
