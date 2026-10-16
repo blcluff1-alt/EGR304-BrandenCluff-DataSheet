@@ -33,4 +33,4 @@ After completing and analyzing the power budget for the Light Sensing Subsystem,
 My power distribution architecture is clean, efficient, and built with reliable, standard components. It avoids unnecessary circuit complexity while guaranteeing safe, stable performance for both benchtop testing and final enclosure integration.
 ## Resouces
 
-The power budget as a PDF download is available [*here*](PowerBudgetExample.pdf), and a Microsoft Excel Sheet [*here*](PowerBudgetExample.xlsx).
+The power budget as a PDF download is available [*here*](Power BudgetBS.pdf), and a Microsoft Excel Sheet [*here*](Power BudgetBS.xlsx).
