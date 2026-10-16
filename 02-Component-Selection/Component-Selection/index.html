@@ -587,123 +587,123 @@
 
 
 <h1 id="component-selection-light-sensing-subsystem">Component Selection: Light Sensing Subsystem</h1>
-<p>This document identifies, compares, and contrasts multiple off-the-shelf and custom solutions for every major active component in the Light Sensing Subsystem[cite: 1].</p>
+<p>This document identifies, compares, and contrasts multiple off-the-shelf and custom solutions for every major active component in the Light Sensing Subsystem.</p>
 <hr>
 <h2 id="major-component-selections">Major Component Selections</h2>
 <h3 id="light-sensor-photoresistor">Light Sensor / Photoresistor</h3>
 <ul>
 <li><strong>Subsystem:</strong> Light Sensing Subsystem</li>
-<li><strong>Description:</strong> A variable resistor whose resistance decreases with increasing incident light intensity, used to detect ambient light levels[cite: 1].</li>
+<li><strong>Description:</strong> A variable resistor whose resistance decreases with increasing incident light intensity, used to detect ambient light levels.</li>
 </ul>
 <p><strong>Option 1:</strong> <a href="https://www.digikey.com/en/products/detail/advanced-photonix/PDV-P8103/480610?gclsrc=aw.ds&amp;gad_source=1&amp;gad_campaignid=20232005509&amp;gclid=CjwKCAjw88HWBhA3EiwAo2Zd6ItJudJQgGAMYT0UdEfhO8QxFR5CcLx-1gv10VwK_xdwT0Irrl9zuBoCCXIQAvD_BwE">Advanced Photonix PDV-P8103 Photoresistor</a><br>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../MFG_PDV-P8103_sml%28200x200%29.jpg" data-desc-position="bottom"><img alt="" src="../MFG_PDV-P8103_sml%28200x200%29.jpg"></a>
-* <strong>Unit Cost:</strong> $0.72
-* <strong>Pros:</strong>
+- <strong>Unit Cost:</strong> $0.72
+- <strong>Pros:</strong>
   * Industry-standard component with well-documented spectral response matching human eye adaptation (~520 nm peak)
   * Reliable 16–33 kΩ resistance range at 10 lux for clear voltage divider scaling
   * Simple passive two-terminal through-hole interface requiring minimal board space
-* <strong>Cons:</strong>
+- <strong>Cons:</strong>
   * Contains cadmium sulfide (CdS), which is subject to environmental regulatory restrictions in certain regions
   * Slower response time compared to semiconductor photodiodes
   * Performance varies noticeably across operating temperature ranges</p>
-<p><strong>Option 2:</strong> <a href="https://www.digikey.com/en/products/detail/adafruit-industries-llc/161/7244927?gclsrc=aw.ds&amp;gad_source=4&amp;gad_campaignid=20232005509&amp;gclid=CjwKCAjw88HWBhA3EiwAo2Zd6A3haKnLQ2WzPscs47utOvQ20RPyVMHKu1Gbs-S90HJDtFfdsrHo3hoCyNYQAvD_BwE">Adafruit Industries LLC Photoresistor (161)</a></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../MFG_1528_161_sml.jpg" data-desc-position="bottom"><img alt="" src="../MFG_1528_161_sml.jpg"></a>
-* <strong>Unit Cost:</strong> $0.95
-* <strong>Pros:</strong>
+<p><strong>Option 2:</strong> <a href="https://www.digikey.com/en/products/detail/adafruit-industries-llc/161/7244927?gclsrc=aw.ds&amp;gad_source=4&amp;gad_campaignid=20232005509&amp;gclid=CjwKCAjw88HWBhA3EiwAo2Zd6A3haKnLQ2WzPscs47utOvQ20RPyVMHKu1Gbs-S90HJDtFfdsrHo3hoCyNYQAvD_BwE">Adafruit Industries LLC Photoresistor (161)</a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../MFG_1528_161_sml.jpg" data-desc-position="bottom"><img alt="" src="../MFG_1528_161_sml.jpg"></a>
+- <strong>Unit Cost:</strong> $0.95
+- <strong>Pros:</strong>
   * Easily accessible hobbyist and prototyping component with broad community documentation
   * Standard through-hole leads fit standard breadboards and perfboards seamlessly
   * Cost-effective solution for basic light-level detection
-* <strong>Cons:</strong>
+- <strong>Cons:</strong>
   * Lacks detailed, rigorous industrial datasheet parametric curves for precise engineering calculations
   * Part-to-part manufacturing tolerances can be wider than industrial-grade components</p>
 <p><strong>Option 3:</strong> <a href="https://www.digikey.com/en/products/detail/advanced-photonix/NSL-19M51/5039794?gclsrc=aw.ds&amp;gad_source=4&amp;gad_campaignid=20232005509&amp;gclid=CjwKCAjw88HWBhA3EiwAo2Zd6GKBTk-YHDayWF8TEzknnWdCNLg3ZWkpF4lIr4LGKpLHJ30Gbes0qRoCjgsQAvD_BwE">Advanced Photonix NSL-19M51 Photoresistor</a><br>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../MFG_NSL-19M51_sml%28200x200%29.jpg" data-desc-position="bottom"><img alt="" src="../MFG_NSL-19M51_sml%28200x200%29.jpg"></a>
-* <strong>Unit Cost:</strong> $1.05
-* <strong>Pros:</strong>
+- <strong>Unit Cost:</strong> $1.05
+- <strong>Pros:</strong>
   * Tight resistance tolerance band for more predictable circuit response
   * Optimized peak spectral response closely mimicking human eye perception
   * High-reliability hermetic or robust package construction suitable for semi-industrial environments
-* <strong>Cons:</strong>
+- <strong>Cons:</strong>
   * Higher unit cost compared to standard commercial CdS cells
   * Slower dark-to-light transition times under low illumination levels</p>
 <p><strong>Choice:</strong> Option 1: Advanced Photonix PDV-P8103 Photoresistor<br>
-<strong>Rationale:</strong> The PDV-P8103 provides a robust, highly predictable resistance swing under varying room lighting conditions that pairs exceptionally well with our voltage divider network. Its through-hole package makes it easy to mount mechanically near enclosure apertures, and its detailed datasheet performance curves allow precise calculation of the op-amp input ranges.</p>
+<strong>Rationale:</strong> We went with this photoresistor because it's widely used, easy to find data on, and gives us a very reliable resistance change when room lighting shifts. Plus, its through-hole leads make it super easy to mount right up against our enclosure window without needing any weird adapters.</p>
 <hr>
 <h3 id="signal-conditioning-operational-amplifier">Signal Conditioning / Operational Amplifier</h3>
 <ul>
-<li><strong>Subsystem:</strong> Light Sensing Subsystem[cite: 1]</li>
-<li><strong>Description:</strong> Active multi-channel integrated circuit used to buffer, scale, and condition the analog voltage signal from the photoresistor divider before routing it to the microcontroller ADC[cite: 1].</li>
+<li><strong>Subsystem:</strong> Light Sensing Subsystem</li>
+<li><strong>Description:</strong> Active multi-channel integrated circuit used to buffer, scale, and condition the analog voltage signal from the photoresistor divider before routing it to the microcontroller ADC.</li>
 </ul>
 <p><strong>Option 1:</strong> <a href="https://www.digikey.com/en/products/detail/microchip-technology/MCP6004-I-P/523060?gclsrc=aw.ds&amp;gad_source=1&amp;gad_campaignid=20790518593&amp;gclid=CjwKCAjw88HWBhA3EiwAo2Zd6FaBLTIoZlL08YNlASY-dnVOxjivM6t0XIXYmlYQm0FLJhkiRFNeFxoCJRIQAvD_BwE">Microchip Technology MCP6004-I/P Quad Op-Amp</a><br>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../MCP6004.jpg" data-desc-position="bottom"><img alt="" src="../MCP6004.jpg"></a>
-* <strong>Unit Cost:</strong> $0.60
-* <strong>Pros:</strong>
+- <strong>Unit Cost:</strong> $0.60
+- <strong>Pros:</strong>
   * Quad packaging provides four independent amplifiers in a single 14-pin DIP package, matching multi-channel project needs
   * Rail-to-rail input and output voltage capability maximizes ADC dynamic range
   * Extremely low quiescent supply current (~100 µA per channel) ideal for efficient power budgets
-* <strong>Cons:</strong>
+- <strong>Cons:</strong>
   * Modest 1 MHz Gain Bandwidth Product limits high-frequency filtering applications
   * Higher input offset voltage (4.5 mV max) compared to precision zero-drift amplifiers</p>
 <p><strong>Option 2:</strong> <a href="https://www.digikey.com/en/products/detail/texas-instruments/LM324AN-NOPB/4733935?gclsrc=aw.ds&amp;gad_source=4&amp;gad_campaignid=20228387720&amp;gclid=CjwKCAjw88HWBhA3EiwAo2Zd6OxryJVN4nKf-lCkC1aVKXZiIfELwSPW_sR4lHUh46O6irp-H2pELhoCIbIQAvD_BwE">Texas Instruments LM324AN/NOPB Quad Operational Amplifier</a><br>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../LM324AN.jpg" data-desc-position="bottom"><img alt="" src="../LM324AN.jpg"></a>
-* <strong>Unit Cost:</strong> <span class="arithmatex">\(1.18
-* **Pros:**
+- <strong>Unit Cost:</strong> <span class="arithmatex">\(1.18
+- **Pros:**
   * Industry classic, highly robust, and widely second-sourced across manufacturers
   * Operates on a wide single-supply voltage range with low unit cost
   * Readily available through-hole PDIP package for straightforward prototyping
-* **Cons:**
+- **Cons:**
   * Outputs do not comfortably reach ground (\)</span>V_{ss}$) without a pull-down resistor on single-supply setups
   * Higher input bias currents can introduce loading errors on high-impedance resistive sensors</p>
 <p><strong>Option 3:</strong> <a href="https://www.digikey.com/en/products/detail/texas-instruments/LM2904N-NOPB/9503?gclsrc=aw.ds&amp;gad_source=4&amp;gad_campaignid=20228387720&amp;gclid=CjwKCAjw88HWBhA3EiwAo2Zd6PNaR_L9dUJDYL6c3gw-JPnZcgQEP2BATJxfeRAvDtghp4Jzk9s9jBoCKjwQAvD_BwE">Texas Instruments LM2904N/NOPB Dual Operational Amplifier</a><br>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../LM2904N.jpg" data-desc-position="bottom"><img alt="" src="../LM2904N.jpg"></a>
-* <strong>Unit Cost:</strong> $1.53
-* <strong>Pros:</strong>
+- <strong>Unit Cost:</strong> $1.53
+- <strong>Pros:</strong>
   * Proven automotive/industrial grade dual op-amp with robust temperature stability
   * Low input bias current and low quiescent power consumption
   * Standard 8-pin DIP package is compact and easy to solder
-* <strong>Cons:</strong>
+- <strong>Cons:</strong>
   * Only contains two operational amplifiers per package, requiring multiple ICs if extra channels are needed
   * Slower slew rate compared to modern CMOS operational amplifiers</p>
-<p><strong>Choice:</strong> Option 1: Microchip Technology MCP6004-I/P Quad Op-Amp[cite: 1]<br>
-<strong>Rationale:</strong> The MCP6004 offers rail-to-rail input/output behavior, ensuring that our scaled 0–5V analog signal maps cleanly across the microcontroller's ADC input range without clipping at the rails. Furthermore, its quad configuration allows us to implement our non-inverting buffer stage efficiently while keeping total active component count and quiescent power draw low.</p>
+<p><strong>Choice:</strong> Option 1: Microchip Technology MCP6004-I/P Quad Op-Amp<br>
+<strong>Rationale:</strong> The MCP6004 is great because it has rail-to-rail inputs and outputs, meaning our signal can go all the way from 0V to 5V without getting cut off or clipped by the chip. Having four amps in one package also gives us extra room to work with if we need to expand our circuit later.</p>
 <hr>
 <h3 id="voltage-regulator">Voltage Regulator</h3>
 <ul>
-<li><strong>Subsystem:</strong> Power Distribution / Light Sensing Subsystem[cite: 1]</li>
-<li><strong>Description:</strong> Linear voltage regulator used to step down an external DC input voltage to a stable +5V rail for system logic and active sensors[cite: 1].</li>
+<li><strong>Subsystem:</strong> Power Distribution / Light Sensing Subsystem</li>
+<li><strong>Description:</strong> Linear voltage regulator used to step down an external DC input voltage to a stable +5V rail for system logic and active sensors.</li>
 </ul>
 <p><strong>Option 1:</strong> <a href="https://www.digikey.com/en/products/detail/stmicroelectronics/L7805CV/585964?gclsrc=aw.ds&amp;gad_source=4&amp;gad_campaignid=24216345527&amp;gclid=CjwKCAjw88HWBhA3EiwAo2Zd6CxCh2O9be1WQWI78UesoRwUkcHCLdEhWNnG7OsbKwciV7ROlTCfPBoCBhcQAvD_BwE">STMicroelectronics L7805CV Linear Regulator</a><br>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../L7805CV.jpg" data-desc-position="bottom"><img alt="" src="../L7805CV.jpg"></a>
-* <strong>Unit Cost:</strong> $1.08
-* <strong>Pros:</strong>
+- <strong>Unit Cost:</strong> $1.08
+- <strong>Pros:</strong>
   * Built-in internal thermal overload and short-circuit current limiting protections
   * Industry-standard TO-220 package allows easy attachment to a heatsink if dissipation increases
   * Requires very few external support components (simple input/output bypass capacitors)
-* <strong>Cons:</strong>
+- <strong>Cons:</strong>
   * Low power efficiency when dropping high input voltages down to 5V (linear voltage drop is lost as heat)
   * Higher dropout voltage requires at least 7V–7.5V input to guarantee solid 5V regulation</p>
-<p><strong>Option 2:</strong> <a href="https://www.digikey.com/en/products/detail/fairchild-semiconductor/LM7805CT/12600247?gclsrc=aw.ds&amp;gad_source=4&amp;gad_campaignid=20228387720&amp;gclid=CjwKCAjw88HWBhA3EiwAo2Zd6McY28ejmCJkb6UukR0h0GEDCj0qNVoPqMKogwqu5gk92IukwZcxpRoCyNIQAvD_BwE">Fairchild Semiconductor LM7805CT Linear Regulator</a> </p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../MFG_L7805CV_sml%28200x200%29.jpg" data-desc-position="bottom"><img alt="" src="../MFG_L7805CV_sml%28200x200%29.jpg"></a>
-* <strong>Unit Cost:</strong> $1.74
-* <strong>Pros:</strong>
+<p><strong>Option 2:</strong> <a href="https://www.digikey.com/en/products/detail/fairchild-semiconductor/LM7805CT/12600247?gclsrc=aw.ds&amp;gad_source=4&amp;gad_campaignid=20228387720&amp;gclid=CjwKCAjw88HWBhA3EiwAo2Zd6McY28ejmCJkb6UukR0h0GEDCj0qNVoPqMKogwqu5gk92IukwZcxpRoCyNIQAvD_BwE">Fairchild Semiconductor LM7805CT Linear Regulator</a><br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../MFG_L7805CV_sml%28200x200%29.jpg" data-desc-position="bottom"><img alt="" src="../MFG_L7805CV_sml%28200x200%29.jpg"></a>
+- <strong>Unit Cost:</strong> $1.74
+- <strong>Pros:</strong>
   * Classic 1.5A positive voltage regulator design with robust transient response
   * Standard pinout compatible with universal TO-220 layouts
   * Well-established thermal and electrical safety characteristics
-* <strong>Cons:</strong>
+- <strong>Cons:</strong>
   * Stock availability can fluctuate depending on manufacturer lot allocations
   * Standard linear thermal dissipation constraints apply under heavy load differences</p>
-<p><strong>Option 3:</strong> <a href="https://www.digikey.com/en/products/detail/umw/L7805CV/17635308?gclsrc=aw.ds&amp;gad_source=4&amp;gad_campaignid=21136823955&amp;gclid=CjwKCAjw88HWBhA3EiwAo2Zd6DBtzZL1cR3kaDQNRy3iu1tnKz8BVTbi_Mep4_b3YuI4tf5wW3_iKRoCOXQQAvD_BwE">UMW L7805CV Linear Regulator</a> </p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../L7805CV.jpg" data-desc-position="bottom"><img alt="" src="../L7805CV.jpg"></a>
-* <strong>Unit Cost:</strong> $1.74
-* <strong>Pros:</strong>
+<p><strong>Option 3:</strong> <a href="https://www.digikey.com/en/products/detail/umw/L7805CV/17635308?gclsrc=aw.ds&amp;gad_source=4&amp;gad_campaignid=21136823955&amp;gclid=CjwKCAjw88HWBhA3EiwAo2Zd6DBtzZL1cR3kaDQNRy3iu1tnKz8BVTbi_Mep4_b3YuI4tf5wW3_iKRoCOXQQAvD_BwE">UMW L7805CV Linear Regulator</a><br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../L7805CV.jpg" data-desc-position="bottom"><img alt="" src="../L7805CV.jpg"></a>
+- <strong>Unit Cost:</strong> $1.74
+- <strong>Pros:</strong>
   * Highly economical pricing for budget-conscious project builds
   * Standard TO-220 packaging for easy mounting and prototyping
   * Provides stable fixed 5V output for standard logic and sensor rails
-* <strong>Cons:</strong>
+- <strong>Cons:</strong>
   * Alternative second-source brand with less historical pedigree than tier-1 manufacturers like STMicroelectronics
   * Maximum output current is rated slightly lower or subject to variance compared to classic 1.5A variants</p>
-<p><strong>Choice:</strong> Option 1: STMicroelectronics L7805CV Linear Regulator[cite: 1]<br>
-<strong>Rationale:</strong> The L7805CV is a reliable, industry-proven linear regulator from a premier manufacturer that provides clean, low-ripple DC power suitable for sensitive analog circuitry like our photoresistor and op-amp signal conditioning stage. Its robust thermal protection and standard TO-220 packaging make it ideal for dependable benchtop and enclosure deployment.</p>
+<p><strong>Choice:</strong> Option 1: STMicroelectronics L7805CV Linear Regulator<br>
+<strong>Rationale:</strong> We chose the STMicro regulator because it's a dependable, standard part that gives us a clean 5V output without adding switching noise to our sensitive analog sensor lines. The TO-220 package also makes it simple to mount and handle during testing.</p>
 <hr>
 <h2 id="pin-table">Pin Table</h2>
 <table>
@@ -718,9 +718,9 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>RA0 / AN0</strong></td>
-<td style="text-align: left;">Microcontroller (PIC18F57Q43)[cite: 1]</td>
-<td style="text-align: left;">Analog Input[cite: 1]</td>
-<td style="text-align: left;">Receives conditioned 0–5V analog signal from the non-inverting op-amp stage[cite: 1]</td>
+<td style="text-align: left;">Microcontroller (PIC18F57Q43)</td>
+<td style="text-align: left;">Analog Input</td>
+<td style="text-align: left;">Receives conditioned 0–5V analog signal from the non-inverting op-amp stage</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>RC2</strong></td>
