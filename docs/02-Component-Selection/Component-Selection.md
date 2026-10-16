@@ -108,6 +108,7 @@ This document identifies, compares, and contrasts multiple off-the-shelf and cus
   * Higher dropout voltage requires at least 7V–7.5V input to guarantee solid 5V regulation
 
 **Option 2:** [Fairchild Semiconductor LM7805CT Linear Regulator](https://www.digikey.com/en/products/detail/fairchild-semiconductor/LM7805CT/12600247?gclsrc=aw.ds&gad_source=4&gad_campaignid=20228387720&gclid=CjwKCAjw88HWBhA3EiwAo2Zd6McY28ejmCJkb6UukR0h0GEDCj0qNVoPqMKogwqu5gk92IukwZcxpRoCyNIQAvD_BwE) 
+
 ![](MFG_L7805CV_sml(200x200).jpg)
 * **Unit Cost:** $1.74
 * **Pros:**
@@ -119,6 +120,7 @@ This document identifies, compares, and contrasts multiple off-the-shelf and cus
   * Standard linear thermal dissipation constraints apply under heavy load differences
 
 **Option 3:** [UMW L7805CV Linear Regulator](https://www.digikey.com/en/products/detail/umw/L7805CV/17635308?gclsrc=aw.ds&gad_source=4&gad_campaignid=21136823955&gclid=CjwKCAjw88HWBhA3EiwAo2Zd6DBtzZL1cR3kaDQNRy3iu1tnKz8BVTbi_Mep4_b3YuI4tf5wW3_iKRoCOXQQAvD_BwE) 
+
 ![](L7805CV.jpg)
 * **Unit Cost:** $1.74
 * **Pros:**
