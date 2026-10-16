@@ -45,7 +45,7 @@ This document identifies, compares, and contrasts multiple off-the-shelf and cus
   * Slower dark-to-light transition times under low illumination levels
 
 **Choice:** Option 1: Advanced Photonix PDV-P8103 Photoresistor  
-**Rationale:** We went with this photoresistor because it's widely used, easy to find data on, and gives us a very reliable resistance change when room lighting shifts. Plus, its through-hole leads make it super easy to mount right up against our enclosure window without needing any weird adapters.
+**Rationale:** We went with this photoresistor because it's widely used, easy to find data on, and gives us a very reliable resistance change when room lighting shifts. Plus, its through-hole leads make it super easy to mount right up against our enclosure window without needing any adapters.
 
 ---
 
@@ -138,7 +138,7 @@ This document identifies, compares, and contrasts multiple off-the-shelf and cus
 | Pin Number / Designator | Subsystem / Component | Signal Name / Type | Description |
 | :--- | :--- | :--- | :--- |
 | **RA0 / AN0** | Microcontroller (PIC18F57Q43) | Analog Input | Receives conditioned 0–5V analog signal from the non-inverting op-amp stage |
-| **RC2** | Microcontroller (PIC18F57Q43) | Digital Output (UART1 TX) | Transmits serial telemetry data through Connector 1 |
+| **RC2** | Microcontroller (PIC18F57Q43) | Digital Output (UART1 TX) | Transmits serial data through Connector 1 |
 | **RC3** | Microcontroller (PIC18F57Q43) | Digital Input (UART1 RX) | Receives external serial commands through Connector 1 |
 | **Connector Pin 1** | External Interface | Digital / Serial | UART RX connection line |
 | **Connector Pin 2** | External Interface | Digital / Serial | UART TX connection line |
