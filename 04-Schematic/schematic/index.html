@@ -86,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#individual-schematic-design-light-sensing-subsystem" class="md-skip">
           Skip to content
         </a>
       
@@ -406,6 +406,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -417,6 +419,24 @@
   <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functional-subsystems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functional Subsystems
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-files-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Files &amp; Documentation
     </span>
   </a>
   
@@ -454,14 +474,46 @@
   
 
 
-  <h1>Schematic</h1>
-
+<h1 id="individual-schematic-design-light-sensing-subsystem">Individual Schematic Design: Light-Sensing Subsystem</h1>
 <h2 id="overview">Overview</h2>
-<p>This schematic is design to support .... (highlight functionally, power, and controller).</p>
-<p>
-<strong>Figure ##:</strong> Showing a example schematic.</p>
+<p>This repository contains the individual ECAD schematic design for the <strong>Light-Sensing Subsystem</strong> developed using <strong>KiCad</strong> for the EGR 304 engineering design project. The subsystem integrates power regulation, microcontroller interfacing, analog signal conditioning, and debugging hardware around a PIC18F57Q43 Curiosity Nano platform.</p>
+<hr>
+<h2 id="functional-subsystems">Functional Subsystems</h2>
+<ul>
+<li><strong>Power Regulation Subsystem</strong></li>
+<li>Accepts external input (<span class="arithmatex">\(9\text{V}\)</span>–<span class="arithmatex">\(12\text{V}\)</span>) via a through-hole Barrel Jack (<code>J2</code>) protected by a 500 mA inline fuse (<code>F1</code>).</li>
+<li>
+<p>Utilizes input (<span class="arithmatex">\(0.33\text{ }\mu\text{F}\)</span>) and output (<span class="arithmatex">\(0.1\text{ }\mu\text{F}\)</span>) filtering capacitors alongside an LM7805 linear regulator (<code>U3</code>) and a 100 <span class="arithmatex">\(\Omega\)</span> preload resistor (<code>R3</code>) to establish a stable <span class="arithmatex">\(5\text{ V}\)</span> rail.</p>
+</li>
+<li>
+<p><strong>Microcontroller Unit (MCU)</strong></p>
+</li>
+<li>
+<p>Implemented using a custom-designed PIC18F57Q43 Curiosity Nano symbol (<code>U1</code>) featuring proper decoupling capacitance (<code>C3</code>) and dedicated UART communication routing (<code>CDC_RX</code>, <code>CDC_TX</code>) for upstream/downstream interfacing.</p>
+</li>
+<li>
+<p><strong>Light Sensor &amp; Signal Conditioning Subsystem</strong></p>
+</li>
+<li>Employs a photoresistor voltage divider (<code>R1</code>, <code>R2</code>) to detect ambient light.</li>
+<li>
+<p>Conditions the analog signal through an MCP6004 quad operational amplifier configured as a unity-gain buffer (<code>U2A</code>), with unused channels safely terminated.</p>
+</li>
+<li>
+<p><strong>User Interface &amp; Debugging Subsystem</strong></p>
+</li>
+<li>Includes a power-status indicator LED (<code>D1</code>, <span class="arithmatex">\(330\text{ }\Omega\)</span> resistor <code>R6</code>) and a microcontroller-driven debug LED (<code>D2</code> on <code>RA1</code>, <span class="arithmatex">\(330\text{ }\Omega\)</span> resistor <code>R7</code>).</li>
+<li>Features an active-low pushbutton (<code>SW1</code> on <code>RA2</code>) with a <span class="arithmatex">\(10\text{ k}\Omega\)</span> pull-up resistor (<code>R8</code>) for testing and user input.</li>
+<li>Interfaces with external hardware and signals via a dedicated ribbon cable connector (<code>J1</code>).</li>
+</ul>
+<hr>
+<h2 id="project-files-documentation">Project Files &amp; Documentation</h2>
+<ul>
+<li><strong>Schematic PDF:</strong> <a href="./path-to-file.pdf">Link to high-resolution schematic PDF</a></li>
+<li><strong>Project Archive (.zip):</strong> [Link to KiCad project archive (.zip)]</li>
+</ul>
+<p></p>
 <h2 id="resouces">Resouces</h2>
-<p>The schematic as a PDF download is available <a href="../304circuit.pdf"><em>here</em></a>, and the Zip folder of the project <a href="../dummyZip.zip"><em>here</em></a>.</p>
+<p>The schematic as a PDF download is available <a href="../304circuit.pdf"><em>here</em></a>, and the Zip folder of the project schematic <a href="../dummyZip.zip"><em>here</em></a>. also the custom symbol library <a href="../Custom_Libraries.zip"><em>here</em></a></p>
 
 
 
