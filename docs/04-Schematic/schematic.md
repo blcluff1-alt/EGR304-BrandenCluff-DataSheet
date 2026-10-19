@@ -30,11 +30,10 @@ This repository contains the individual ECAD schematic design for the **Light-Se
 ---
 
 ## Project Files & Documentation
-* **Schematic PDF:** [Link to high-resolution schematic PDF](./path-to-file.pdf)
 
 
 
-![schematic](304circuitschm.png){style width:"350" height:"300;"}
+![Schematic Overview](304circuitschm.png)
 
 
 
