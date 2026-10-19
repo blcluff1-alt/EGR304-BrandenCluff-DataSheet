@@ -33,7 +33,7 @@ This repository contains the individual ECAD schematic design for the **Light-Se
 
 
 
-![](/04-Schematic/304circuitschm.png)
+![](304circuitschm.png)
 
 
 
