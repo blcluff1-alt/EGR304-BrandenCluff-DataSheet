@@ -12,7 +12,7 @@ This repository contains the individual ECAD schematic design for the **Light-Se
 ## Functional Subsystems
 
 * **Power Regulation Subsystem**
-  * Accepts external input ($9\text{V}$–$12\text{V}$) via a through-hole Barrel Jack (`J2`) protected by a 500 mA inline fuse (`F1`).
+  * Accepts external input (9V–$12V) via a through-hole Barrel Jack (`J2`) protected by a 500 mA inline fuse (`F1`).
   * Utilizes input ($0.33\text{ }\mu\text{F}$) and output ($0.1\text{ }\mu\text{F}$) filtering capacitors alongside an LM7805 linear regulator (`U3`) and a 100 $\Omega$ preload resistor (`R3`) to establish a stable $5\text{ V}$ rail.
 
 * **Microcontroller Unit (MCU)**
