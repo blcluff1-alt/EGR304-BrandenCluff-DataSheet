@@ -33,10 +33,10 @@ This repository contains the individual ECAD schematic design for the **Light-Se
 
 
 
-![Schematic Overview](304circuitschm.png)
+![Schematic Overview](sch_screenshot.png)
 
 
 
 ## Resouces
 
-The schematic as a PDF download is available [*here*](304circuit.pdf), and the Zip folder of the project schematic [*here*](dummyZip.zip). also the custom symbol library [*here*](Custom_Libraries.zip)
+The schematic as a PDF download is available [*here*](sch.pdf), and the Zip folder of the project schematic [*here*](dummyZip.zip). also the custom symbol library [*here*](Custom_Libraries.zip)
