@@ -32,11 +32,11 @@ This repository contains the individual ECAD schematic design for the **Light-Se
 ## Project Files & Documentation
 
 
-
+Image of the schematic should show here if github works
 ![Schematic Overview](sch_screenshot.png)
 
 
 
 ## Resouces
 
-The schematic as a PDF download is available [*here*](sch.pdf), and the Zip folder of the project schematic [*here*](dummyZip.zip). also the custom symbol library [*here*](Custom_Libraries.zip)
+The schematic as a PDF download is available [*here*](sch.pdf), and the Zip folder of the project schematic [*here*](EGR304circuit.zip). also the custom symbol library [*here*](Custom_Libraries.zip)
