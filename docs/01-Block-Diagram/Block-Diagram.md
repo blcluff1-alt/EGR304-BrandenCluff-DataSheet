@@ -30,4 +30,4 @@ The purpose of this individual subsystem block diagram is to define the hardware
   * **Shared Ground & Power:** Pin 8 of Connector 1 establishes a common ground (`GND`) across all team boards to maintain a consistent signal reference.
 
 ## Block Diagram 
-![](IndividualBlockDiagram.drawio(1).png)
+![](BOM2.png)
