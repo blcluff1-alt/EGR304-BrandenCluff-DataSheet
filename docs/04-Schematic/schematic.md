@@ -33,7 +33,7 @@ This repository contains the individual ECAD schematic design for the **Light-Se
 
 
 Image of the schematic should show here if github works
-![Schematic Overview](sch_screenshot.png)
+![Schematic Overview](Schematicscreen.png)
 
 
 
