@@ -14,21 +14,30 @@ for<br>
 **Submission: month, DD, YYYY**
 </center>
 
+# Low-Power Environmental Monitoring System
+
 ## Introduction
 
-* This needs to be updated so that a reader gets an idea of the purpose of this datasheet.
+This datasheet documents the hardware design, PCB layout, component selection, and embedded C firmware for a low-power environmental monitoring node. It serves as a clear technical guide for building, programming, and testing the system.
+
+---
 
 ### Project Summary
 
-* This needs to be updated to reflect <ins>your version</ins> of the team project, so when shared not via the team's report, the reader gets an idea of the direction of the project and how your work will contribute to the overall success.
-* Add context that ties into the link to your [team report.](https://embedded-systems-design.github.io/EGR304TeamTemplate/)
+This repository contains my individual subsystem for our team's EGR304 Embedded Systems Design project. My system monitors real-time environmental data—including atmospheric pressure, relative humidity, and ambient light levels—using a PIC18F57Q43 Curiosity Nano microcontroller. 
 
+The module processes sensor data, displays values on an LCD screen, and sends live data over UART to a central display. It runs on a custom regulated power circuit designed for efficiency and reliable operation.
+
+For full context on how this node integrates into our overall system, see our [Team Report](https://embedded-systems-design.github.io/EGR304TeamTemplate/).
+
+---
 
 ### My Contribution
 
-* This needs to be updated to reflect a team introduction
-* Content should also help an unfamiliar reader navigate to areas of interest. Information like:
+I designed and built this subsystem from circuit concept to hardware testing. Key contributions include:
 
-To review the details listed of the material used to construct the subsection, you can review it in the ["BOM"](https://embedded-systems-design.github.io/EGR304DataSheetTemplate/03-BOM/BOM/) section of the datasheet.
+* **Schematic Design:** Created KiCad schematics using US symbol standards for the power regulator, sensors, and display interfaces.
+* **PCB Layout:** Completed component placement, signal routing, DRC verification, and Gerber file generation for manufacturing.
+* **Firmware Development:** Wrote C code in MPLAB X IDE for the PIC18F57Q43, featuring a multi-sample rolling buffer for digital signal smoothing and UART data output.
+* **Hardware Validation:** Tested power rails and verified sensor data output using an oscilloscope and digital multimeter.
 
-For all the sections
