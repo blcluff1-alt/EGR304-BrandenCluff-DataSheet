@@ -88,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#low-power-environmental-monitoring-system" class="md-skip">
           Skip to content
         </a>
       
@@ -360,6 +360,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -387,6 +389,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -553,6 +557,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -616,8 +622,6 @@
   
 
 
-  <h1>Home</h1>
-
 <p></p><center>
 <font size="6">Branden Cluff Datasheet</font><br>
 as part of<br>
@@ -626,22 +630,23 @@ for<br>
 <font size="5"> Team 202 </font><br><p></p>
 <p><strong>Submission: month, DD, YYYY</strong>
 </p></center><p></p>
+<h1 id="low-power-environmental-monitoring-system">Low-Power Environmental Monitoring System</h1>
 <h2 id="introduction">Introduction</h2>
-<ul>
-<li>This needs to be updated so that a reader gets an idea of the purpose of this datasheet.</li>
-</ul>
+<p>This datasheet documents the hardware design, PCB layout, component selection, and embedded C firmware for a low-power environmental monitoring node. It serves as a clear technical guide for building, programming, and testing the system.</p>
+<hr>
 <h3 id="project-summary">Project Summary</h3>
-<ul>
-<li>This needs to be updated to reflect <ins>your version</ins> of the team project, so when shared not via the team's report, the reader gets an idea of the direction of the project and how your work will contribute to the overall success.</li>
-<li>Add context that ties into the link to your <a href="https://embedded-systems-design.github.io/EGR304TeamTemplate/">team report.</a></li>
-</ul>
+<p>This repository contains my individual subsystem for our team's EGR304 Embedded Systems Design project. My system monitors real-time environmental data—including atmospheric pressure, relative humidity, and ambient light levels—using a PIC18F57Q43 Curiosity Nano microcontroller. </p>
+<p>The module processes sensor data, displays values on an LCD screen, and sends live data over UART to a central display. It runs on a custom regulated power circuit designed for efficiency and reliable operation.</p>
+<p>For full context on how this node integrates into our overall system, see our <a href="https://embedded-systems-design.github.io/EGR304TeamTemplate/">Team Report</a>.</p>
+<hr>
 <h3 id="my-contribution">My Contribution</h3>
+<p>I designed and built this subsystem from circuit concept to hardware testing. Key contributions include:</p>
 <ul>
-<li>This needs to be updated to reflect a team introduction</li>
-<li>Content should also help an unfamiliar reader navigate to areas of interest. Information like:</li>
+<li><strong>Schematic Design:</strong> Created KiCad schematics using US symbol standards for the power regulator, sensors, and display interfaces.</li>
+<li><strong>PCB Layout:</strong> Completed component placement, signal routing, DRC verification, and Gerber file generation for manufacturing.</li>
+<li><strong>Firmware Development:</strong> Wrote C code in MPLAB X IDE for the PIC18F57Q43, featuring a multi-sample rolling buffer for digital signal smoothing and UART data output.</li>
+<li><strong>Hardware Validation:</strong> Tested power rails and verified sensor data output using an oscilloscope and digital multimeter.</li>
 </ul>
-<p>To review the details listed of the material used to construct the subsection, you can review it in the <a href="https://embedded-systems-design.github.io/EGR304DataSheetTemplate/03-BOM/BOM/">"BOM"</a> section of the datasheet.</p>
-<p>For all the sections</p>
 
 
 
