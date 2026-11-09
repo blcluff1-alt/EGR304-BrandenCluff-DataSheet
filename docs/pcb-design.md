@@ -18,14 +18,14 @@ This custom 2-layer printed circuit board (PCB) was designed for the PIC18F57Q43
 ## PCB Layout Views
 
 ### Top Layer (`F.Cu`)
-![PCB Top Layout Image]()
+![PCB Top Layout Image](top.png)
 
 ### Bottom Layer (`B.Cu`)
-![PCB Bottom Layout Image]()
+![PCB Bottom Layout Image](Bottom.png)
 
 ---
 
 ## Design Rule Check (DRC) Verification
 The completed layout was verified using KiCad's Design Rules Checker with zone refills enabled, confirming **0 Errors** and **0 Warnings**.
 
-![DRC Verification Screenshot]()
+![DRC Verification Screenshot](Board.png)
