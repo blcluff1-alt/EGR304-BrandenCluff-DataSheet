@@ -29,3 +29,8 @@ This custom 2-layer printed circuit board (PCB) was designed for the PIC18F57Q43
 The completed layout was verified using KiCad's Design Rules Checker with zone refills enabled, confirming **0 Errors** and **0 Warnings**.
 
 ![DRC Verification Screenshot](Board.png)
+
+---
+
+## Deliverables
+* [Download Production Gerbers (gerbers.zip)](gerbers.zip)
